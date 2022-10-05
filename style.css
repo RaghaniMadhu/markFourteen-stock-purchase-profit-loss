@@ -1,17 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Quicksand:wght@400;700&display=swap');
+
+:root{
+    --primary-color:#813772;
+    --secondary-color: #f5d0fe;
+    --ternary-color:  #fdf4ff;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px auto;
+    background-color: var(--secondary-color);
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: 'Calligraffitti', cursive;
+}
+
+input{
+    margin-top: 0%;
+    margin-bottom: 0.7rem;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 0.3rem;
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}   
+
 * {
     text-align: center;
 }
 
 label{
-    display: block;
+    text-align: center;
+    font-weight: bold;
     padding-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 button{
-    margin: 1rem;
-    padding: 0.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white-color);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    font-size: large;
+    font-weight: bold;
 }
 
 #output{
-    margin: 1rem;
+    font-size: large;    
+    color: var(--white-color);
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.main-container{
+    display: block;
+    width: 20vw;
+    margin: auto;
 }

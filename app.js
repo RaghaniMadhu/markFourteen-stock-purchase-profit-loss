@@ -27,19 +27,19 @@ function showMessage(message, finalMessage){
 }
 
 function validateInput(iniPrice, noOfStocks, currPrice){
-    if (!(initialPriceInput.validity.valid)){
+    if (iniPrice.length === 0){
         showMessage("Please Give Initial Price", "INCORRECTINPUT");
         return false;            
     }
-    if (!(noOfStocksInput.validity.valid)){
+    if (noOfStocks.length === 0){
         showMessage("Please Give No oF Stocks", "INCORRECTINPUT");
         return false;            
     }
-    if (!(currentPriceInput.validity.valid)){
+    if (currPrice === undefined){
         showMessage("Please Give Current Price", "INCORRECTINPUT");
         return false;            
     }
-    if( (iniPrice < 1) || (noOfStocks < 1) || (currPrice < 1)){
+    if( (Number(iniPrice) < 1) || (Number(noOfStocks) < 1) || (Number(currPrice) < 1)){
         showMessage("Input Can't be 0 or -ve", "INCORRECTINPUT");
         return false;
     }
@@ -68,7 +68,7 @@ function findProfitLoss(iniPrice, noOfStocks, currPrice){
 }
 
 function calculator(){
-    if(validateInput(Number(initialPriceInput.value), Number(noOfStocksInput.value), Number(currentPriceInput.value))){
+    if(validateInput(initialPriceInput.value, noOfStocksInput.value), currentPriceInput.value){
         const op = findProfitLoss(Number(initialPriceInput.value), Number(noOfStocksInput.value), Number(currentPriceInput.value));
         showMessage(op[0], op[1]);
     }
