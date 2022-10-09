@@ -68,7 +68,7 @@ function findProfitLoss(iniPrice, noOfStocks, currPrice){
 }
 
 function calculator(){
-    if(validateInput(initialPriceInput.value, noOfStocksInput.value), currentPriceInput.value){
+    if(validateInput(initialPriceInput.value, noOfStocksInput.value, currentPriceInput.value)){
         const op = findProfitLoss(Number(initialPriceInput.value), Number(noOfStocksInput.value), Number(currentPriceInput.value));
         showMessage(op[0], op[1]);
     }
