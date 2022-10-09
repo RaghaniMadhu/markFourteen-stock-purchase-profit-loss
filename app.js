@@ -51,13 +51,13 @@ function findProfitLoss(iniPrice, noOfStocks, currPrice){
     if(iniPrice > currPrice){
         // bought costlier than current - LOSS
         const loss = (iniPrice - currPrice) * noOfStocks;
-        const lossPercent = (loss/iniPrice) * 100;
+        const lossPercent = ((iniPrice - currPrice)/iniPrice) * 100;
         op[0] = "Uh Oh! You are currently at loss of " + loss + " which is " + lossPercent.toFixed(2) + "%";
         op[1] = "LOSS";
     }else if(iniPrice < currPrice){
         // bought cheaper than current - PROFIT
         const profit = (currPrice - iniPrice) * noOfStocks;
-        const profitPercent = (profit/iniPrice) * 100;
+        const profitPercent = ((currPrice - iniPrice)/iniPrice) * 100;
         op[0] = "Wowww! You are at profit of " + profit + " which is " + profitPercent.toFixed(2) + "%";
         op[1] = "PROFIT";
     }else{
